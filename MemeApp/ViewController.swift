@@ -11,9 +11,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
                         UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var TopText: UITextField!
+  
     
     @IBOutlet weak var BottomText: UITextField!
-
+    
+    
     @IBOutlet weak var ImagePickerView: UIImageView!
    
     
@@ -24,7 +26,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         BottomText.text = "BOTTOM"
         TopText.textAlignment = .center
         BottomText.textAlignment = .center
-        
+       
     }
     
     func PickAnImage (Source: UIImagePickerController.SourceType){

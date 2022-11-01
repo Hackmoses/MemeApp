@@ -29,12 +29,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lAC-xK-wIC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="ee6-qb-T7p">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-9r-0QI">
                                 <rect key="frame" x="159" y="784" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="Yku-IN-qmK">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ie-zM-VkE">
                                 <rect key="frame" x="159" y="44" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,25 +47,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lAC-xK-wIC" secondAttribute="bottom" constant="44" id="3bD-1H-xVz"/>
                             <constraint firstItem="lAC-xK-wIC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9WL-et-4db"/>
                             <constraint firstItem="lAC-xK-wIC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9oo-Bl-R2Z"/>
-                            <constraint firstItem="ee6-qb-T7p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="JGQ-KI-hrs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yku-IN-qmK" secondAttribute="trailing" constant="158" id="QI5-Px-t68"/>
+                            <constraint firstItem="k8a-9r-0QI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="740" id="L79-fP-j2a"/>
+                            <constraint firstItem="1ie-zM-VkE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="MD8-Nz-IBG"/>
                             <constraint firstItem="lAC-xK-wIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qxg-GK-gfd"/>
-                            <constraint firstItem="EDJ-Nl-kEG" firstAttribute="top" secondItem="ee6-qb-T7p" secondAttribute="bottom" id="VOP-1I-g4h"/>
+                            <constraint firstItem="k8a-9r-0QI" firstAttribute="top" secondItem="1ie-zM-VkE" secondAttribute="bottom" constant="706" id="ViT-Tf-ZDN"/>
                             <constraint firstItem="EDJ-Nl-kEG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xcx-2h-Wkv"/>
                             <constraint firstItem="EDJ-Nl-kEG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zof-dE-suk"/>
-                            <constraint firstItem="Yku-IN-qmK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bII-JD-dtO"/>
-                            <constraint firstItem="Yku-IN-qmK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="eDv-2D-hpg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee6-qb-T7p" secondAttribute="trailing" constant="158" id="o14-oZ-NzV"/>
-                            <constraint firstItem="ee6-qb-T7p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="740" id="tbu-LS-15s"/>
-                            <constraint firstItem="ee6-qb-T7p" firstAttribute="top" secondItem="Yku-IN-qmK" secondAttribute="bottom" constant="706" id="uqa-bl-sYv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ie-zM-VkE" secondAttribute="trailing" constant="158" id="b55-Ft-FeE"/>
+                            <constraint firstItem="k8a-9r-0QI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="hWd-Qy-GVT"/>
                             <constraint firstItem="EDJ-Nl-kEG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ydY-Lz-dc6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k8a-9r-0QI" secondAttribute="trailing" constant="158" id="ykB-Gw-MPS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ButtomText" destination="ee6-qb-T7p" id="Uov-8o-tYw"/>
-                        <outlet property="ButtonText" destination="ee6-qb-T7p" id="lW6-CL-0SD"/>
+                        <outlet property="BottomText" destination="k8a-9r-0QI" id="aAz-rS-6lR"/>
                         <outlet property="ImagePickerView" destination="lAC-xK-wIC" id="qoH-pC-sDb"/>
-                        <outlet property="TopText" destination="Yku-IN-qmK" id="2AI-aE-IGY"/>
+                        <outlet property="TopText" destination="1ie-zM-VkE" id="xYG-MQ-Hc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
