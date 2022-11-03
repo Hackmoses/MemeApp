@@ -51,6 +51,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        CameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        #if targetEnvironment(simulator)
+            CameraButton.isEnabled = false
+        #else
+            CameraButton.isEnabled = true
+        #endif
         
         subscribeToKeyboardNotifications()
     }
@@ -59,7 +65,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         
         super.viewWillDisappear(animated)
         
-        CameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         unsubscribeFromKeyboardNotifications()
        
     }
@@ -122,7 +127,10 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     
     @objc func keyboardWillShow(_ notification:Notification) {
         
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        if (self.BottomText.isFirstResponder && self.view.frame.origin.y == 0)
+                {
+                    self.view.frame.origin.y -= getKeyboardHeight(notification)
+                }
     }
     
     @objc func keyboardWillHide(_ notification:Notification) {
