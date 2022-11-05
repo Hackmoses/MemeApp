@@ -96,7 +96,7 @@ class MemeEditorViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
     @IBAction func ActvityControl(_ sender: Any) {
-        let image = UIImage()
+        let image = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         self.present(controller, animated: true, completion: nil )
         controller.completionWithItemsHandler = { activity, success, items, error in
