@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate,
+class MemeEditorViewController: UIViewController,UIImagePickerControllerDelegate,
                       UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var TopToolBar: UIToolbar!
@@ -36,7 +36,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     func setUpTextField(_ textField: UITextField, text: String) {
         textField.text = text
         textField.defaultTextAttributes = [
-            .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            .font: UIFont(name: "Impact", size: 40)!,
             .foregroundColor: UIColor.white,
             .strokeColor: UIColor.black,
             .strokeWidth: -3.0
@@ -75,7 +75,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
         TopText.text = "TOP"
         BottomText.text = "BOTTOM"
         ActivityButton.isEnabled = false
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     

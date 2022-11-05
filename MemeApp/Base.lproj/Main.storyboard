@@ -8,11 +8,16 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="impact.ttf">
+            <string>Impact</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Sent Memes Scene-->
         <scene sceneID="yIr-ro-SwU">
             <objects>
-                <tableViewController id="HFi-82-8LE" userLabel="Sent Memes Scene" customClass="SendMemeTableViewController" sceneMemberID="viewController">
+                <tableViewController id="HFi-82-8LE" userLabel="Sent Memes Scene" customClass="SendMemeTableViewController" customModule="MemeApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GRO-PH-uU1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +40,7 @@
                     <navigationItem key="navigationItem" title="Sent Meme" id="h2y-p5-vdf">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="ZiP-Tc-898">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="f48-4M-8xT"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="ZoF-cL-sqG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -96,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="-1752" y="589"/>
         </scene>
-        <!--Sent Items-->
+        <!--Sent Meme-->
         <scene sceneID="qb8-hE-Snf">
             <objects>
                 <collectionViewController id="LcV-33-Tfp" customClass="SentMemeCollectionViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,18 +116,23 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="sdG-SA-gfb" customClass="MemeCollectionViewCell" customModule="MemeApp" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="sdG-SA-gfb" customClass="MemeCollectionViewCell" customModule="MemeApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="186" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z25-rH-ir8">
                                     <rect key="frame" x="0.0" y="0.0" width="186" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yn-wN-d4H">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yn-wN-d4H">
                                             <rect key="frame" x="-27" y="11" width="240" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5yn-wN-d4H" firstAttribute="centerY" secondItem="z25-rH-ir8" secondAttribute="centerY" id="Cg9-8K-64R"/>
+                                        <constraint firstItem="5yn-wN-d4H" firstAttribute="centerX" secondItem="z25-rH-ir8" secondAttribute="centerX" id="GFn-8d-ugE"/>
+                                        <constraint firstItem="5yn-wN-d4H" firstAttribute="top" secondItem="z25-rH-ir8" secondAttribute="top" constant="11" id="aNk-aK-Pvj"/>
+                                        <constraint firstItem="5yn-wN-d4H" firstAttribute="leading" secondItem="z25-rH-ir8" secondAttribute="leading" constant="-27" id="ddd-nY-7oF"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="186" height="151"/>
                             </collectionViewCell>
@@ -132,10 +142,10 @@
                             <outlet property="delegate" destination="LcV-33-Tfp" id="Fpn-gc-SV0"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Sent Items" id="scD-sO-8ML">
+                    <navigationItem key="navigationItem" title="Sent Meme" id="scD-sO-8ML">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="svN-qE-1D6">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="srV-Y8-isV"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="87M-SG-YVH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -147,16 +157,16 @@
             </objects>
             <point key="canvasLocation" x="-820.28985507246387" y="610.71428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Editor View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-Kf-BrV" userLabel="BottomToolbar">
-                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yWk-dY-mft"/>
                                 </constraints>
@@ -189,7 +199,7 @@
                                 </items>
                             </toolbar>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pco-2U-ly0">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5T-Iy-ChL" userLabel="TopToolbar">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -223,16 +233,16 @@
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IlY-h5-GGs">
-                                <rect key="frame" x="0.0" y="140" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="722"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="hYm-VC-6mn" userLabel="TopText">
-                                <rect key="frame" x="0.0" y="140" width="414" height="18.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="14"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="0.0"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="fhH-Pt-MuI">
-                                <rect key="frame" x="0.0" y="750.5" width="414" height="18.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="804" width="414" height="14"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="0.0"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
@@ -275,7 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="srV-Y8-isV"/>
+        <segue reference="87M-SG-YVH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>

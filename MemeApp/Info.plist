@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Impacted.ttf</string>
+		<string>impact.ttf</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow Photo Description</string>
 	<key>NSCameraUsageDescription</key>
