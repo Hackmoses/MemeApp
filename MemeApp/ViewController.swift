@@ -162,7 +162,11 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,
     
     func save() {
         // Create the meme
-        _ = Meme(TopText: TopText.text!, BottomText: BottomText.text!, originalImage: ImagePickerView.image!, memedImage: generateMemedImage())
+        let meme = Meme(TopText: TopText.text!, BottomText: BottomText.text!, originalImage: ImagePickerView.image!, memedImage: generateMemedImage())
+        
+        let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.memes.append(meme)
     }
     
     func toolBarVisability(hidden: Bool)
