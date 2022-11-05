@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+
+class MemeTableViewCell: UITableViewCell {
+    
+    /*@IBOutlet weak var memeTitleLabel: UILabel!
+    @IBOutlet weak var memeImageView: UIImageView!
+     
+     */
+}
+
 class SentMemeTableViewController: UITableViewController {
     
     var memes: [Meme]! {
