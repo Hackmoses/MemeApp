@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Impacted.ttf">
+        <array key="impact.ttf">
             <string>Impact</string>
         </array>
     </customFonts>
@@ -285,6 +285,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="65.625"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="iu1-5X-hQz">
+            <objects>
+                <viewController id="gOW-S6-Ybl" customClass="MemeDetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BSp-fl-sG1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-TY-NKC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JMv-F1-iSW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xg9-TY-NKC" firstAttribute="bottom" secondItem="JMv-F1-iSW" secondAttribute="bottom" id="D5q-P7-vgz"/>
+                            <constraint firstItem="xg9-TY-NKC" firstAttribute="leading" secondItem="JMv-F1-iSW" secondAttribute="leading" id="PZI-1G-owy"/>
+                            <constraint firstItem="xg9-TY-NKC" firstAttribute="centerX" secondItem="BSp-fl-sG1" secondAttribute="centerX" id="ps2-BY-7Sp"/>
+                            <constraint firstItem="xg9-TY-NKC" firstAttribute="top" secondItem="JMv-F1-iSW" secondAttribute="top" id="xHR-tn-Lkv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L9k-ex-J7L"/>
+                    <connections>
+                        <outlet property="memedImage" destination="xg9-TY-NKC" id="4B6-l0-Rcb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8N7-E7-dzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="772.46376811594212" y="65.625"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
