@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="impact.ttf">
+        <array key="Impacted.ttf">
             <string>Impact</string>
         </array>
     </customFonts>
@@ -289,7 +289,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="iu1-5X-hQz">
             <objects>
-                <viewController id="gOW-S6-Ybl" customClass="MemeDetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="gOW-S6-Ybl" customClass="MemeDetailViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSp-fl-sG1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
